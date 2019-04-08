@@ -1,0 +1,3 @@
+.read table.sql
+.read insert.sql
+.read query.sql
