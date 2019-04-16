@@ -1,0 +1,3 @@
+graft jinkanban/templates
+graft jinkanban/static
+include jinkanban/schema.sql

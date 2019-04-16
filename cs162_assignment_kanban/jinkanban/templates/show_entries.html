@@ -1,0 +1,80 @@
+
+{% extends "layout.html" %}
+{% block body %}
+{% if session.logged_in %}
+	<form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+		<!-- create a table, to structure the kanban board -->
+		<table width = 100%>
+			<tr>
+			<br>
+			<tr/>
+			<tr>
+				<td bgcolor=#EB4E4E><p>
+				<h2>Done</h2>
+				<!-- allow items to be dropped in this list -->
+				<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><ul>
+					<!-- allow the bullet points to be draggable -->
+					<li id="drag1" draggable="true" ondragstart="drag(event)">buy milk</li>
+					<li id="drag2" draggable="true" ondragstart="drag(event)">play football</li>
+					<li id="drag3" draggable="true" ondragstart="drag(event)">eat wings with friends</li>
+				</ul></div></p>
+				</td>
+
+				<td bgcolor=#2AC964><p>
+				<h2>Doing</h2>
+				<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><ul>
+					<li id="drag4" draggable="true" ondragstart="drag(event)">cs152 9.1 preclass work</li>
+					<li id="drag5" draggable="true" ondragstart="drag(event)">call mom</li>
+				</ul></div></p>
+				</td>
+
+				<td bgcolor=#DF912D><p>
+				<h2>To Do</h2>
+				<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"><ul>
+					<li id="drag6" draggable="true" ondragstart="drag(event)">lunar new year preparation</li>
+					<li id="drag7" draggable="true" ondragstart="drag(event)">buy AAA battery</li>
+					<!-- show all the added task items through a for loop, and also make it draggable -->
+					{% for entry in entries|reverse %}
+					<li id="drag{{loop.index+7}}" draggable="true" ondragstart="drag(event)">{{ entry.text }} </li>
+					{% endfor %}
+				</ul></div>
+				<div class=add>
+					<!-- input items in this text box -->
+				<input type="text" name=text placeholder="add more" autofocus="autofocus">
+				</div>
+				</p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" bgcolor=#N44E4E><p>
+				<h2>Deleted</h2>
+				<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"><ul>
+					<li></li>
+				</ul></div>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+<p id="demo"></p>
+
+<!-- functions that allow items to be dragged and dropped-->
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
+
+{% endif %}
+{% endblock %}
