@@ -1,5 +1,5 @@
 
-# CS162: Software Development class at [Minerva] (https://www.theguardian.com/education/2020/jul/30/the-future-of-education-or-just-hype-the-rise-of-minerva-the-worlds-most-selective-university)
+# CS162: Software Development class at [Minerva](https://www.theguardian.com/education/2020/jul/30/the-future-of-education-or-just-hype-the-rise-of-minerva-the-worlds-most-selective-university)
 
 Taught by Professor [Philip Sterne, Ph.D.](https://www.minerva.kgi.edu/people/philip-sterne/)
 
