@@ -1,16 +1,14 @@
 
-<Running the Kanban Board>
-Please run the following line of code on bash to initiate the Kanban board:
-$ cd jin_kanban
-$ pip3 install -r requirements.txt
-$ export FLASK_APP=jinkanban
-$ export FLASK_ENV=development
-$ flask initdb
-$ flask run
+Running the Kanban Board: Please run the following line of code on bash to initiate the Kanban board:
+$ cd jin_kanban<br>
+$ pip3 install -r requirements.txt<br>
+$ export FLASK_APP=jinkanban<br>
+$ export FLASK_ENV=development<br>
+$ flask initdb<br>
+$ flask run<br>
 
 
-<Unit Tests>
-Please run the following line of code on bash to perform unit tests:
+Unit Tests: Please run the following line of code on bash to perform unit tests:
 $ cd jin_kanban
 $ python setup.py test
 
