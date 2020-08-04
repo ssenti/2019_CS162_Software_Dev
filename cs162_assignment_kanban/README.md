@@ -9,19 +9,14 @@ $ flask run<br>
 
 
 Unit Tests: Please run the following line of code on bash to perform unit tests:
-$ cd jin_kanban
-$ python setup.py test
+$ cd jin_kanban<br>
+$ python setup.py test<br>
 
 
-<Kanban Board Description>
-The Kanban board supports the following main functions:
-
-1) Allows the user to log in and log out, and the information will be automatically saved in the database (jinkanban.db). Below is the login information.
-
-Username: jin
-Password: cs162
-
-2) Allows the user to add new items to the "To Do" list. 
-
-3) Allows the user to freely drag and drop items between different states -- "Deleted", "Done", "Doing" and "To Do"
+Kanban Board Description: The Kanban board supports the following main functions:<br>
+1) Allows the user to log in and log out, and the information will be automatically saved in the database (jinkanban.db). Below is the login information.<br>
+Username: jin<br>
+Password: cs162<br>
+2) Allows the user to add new items to the "To Do" list. <br>
+3) Allows the user to freely drag and drop items between different states -- "Deleted", "Done", "Doing" and "To Do"<br>
 
